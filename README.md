@@ -11,4 +11,4 @@ Update:
 
 Time: Tue Oct 23 13:50:26 CST 2018. 
 
-Work: Rebuild directory structure, finished "kprintf" function and finished memory detected.
+- [x]  Work: Rebuild directory structure, finished "kprintf" function and finished memory detected. ***(Finished)***
