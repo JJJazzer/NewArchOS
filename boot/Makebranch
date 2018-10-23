@@ -1,0 +1,17 @@
+
+BOOT_OBJS = Object/boot.o Object/setup.o 
+
+Object/boot.o: boot/boot.S
+	@mkdir -p Object
+	$(CC) $(CFLAGS) $< -o $@ 
+Object/setup.o: boot/setup.c
+	@mkdir -p Object 
+	$(CC) $(CFLAGS) $< -Os -o $@
+
+Image/boot_bin: $(BOOT_OBJS)
+	@mkdir -p Image 
+	$(LD) $(LDFLAGS) -N -e start16 -Ttext 0x7c00 $^ -o $@.out 
+	@objdump -S $@.out > $@.asm
+	@objcopy -S -O binary -j .text $@.out $@
+	@perl boot/sign.pl $@
+
