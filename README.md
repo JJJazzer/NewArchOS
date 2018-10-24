@@ -11,4 +11,8 @@ Update:
 
 Time: Tue Oct 23 13:50:26 CST 2018. 
 
-- [x]  Work: Rebuild directory structure, finished "kprintf" function and finished memory detected. ***(Finished)***
+- [x]  WORk: Rebuild directory structure, finished "kprintf" function and finished memory detected. ***(Finished)***
+
+Time: Wed Oct 24 09:49:02 CST 2018
+
+- []   WORk: Setup page, finishing virtual address translate to physical address.
